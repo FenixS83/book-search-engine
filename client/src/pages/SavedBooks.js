@@ -8,7 +8,6 @@ import { useQuery, useMutation } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
-
 const SavedBooks = () => {
   const { load, data} = useQuery(GET_ME);
   const [deleteBook] = useMutation(REMOVE_BOOK);
@@ -38,7 +37,6 @@ const SavedBooks = () => {
   if (load) {
     return <h2>LOADING...</h2>;
   }
-
 
   return (
     <>
